@@ -42,7 +42,7 @@
 
 ### flex-direction
 
-​	**该属性决定了main axis的方向 用来改变flex item的布局方向 取值一共有4个 ** 
+​	**该属性决定了main axis的方向 用来改变flex item的布局方向 取值一共有4个**
 
   - row(默认值) (main start 在左边 main end在右边)
 
