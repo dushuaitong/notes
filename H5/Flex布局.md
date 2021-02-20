@@ -40,9 +40,7 @@
 
 ## 用在flex container上的属性
 
-### flex-direction
-
-​	**该属性决定了main axis的方向 用来改变flex item的布局方向 取值一共有4个**
+### flex-direction  该属性决定了main axis的方向 用来改变flex item的布局方向 取值一共有4个
 
   - row(默认值) (main start 在左边 main end在右边)
 
@@ -60,9 +58,7 @@
 
     <img src="images/column-reverse.png" style="zoom:50%;" />
 
-### justify-content
-
-​	**该属性决定了flex items 在main axis上的对齐方式 其取值方式有6个**
+### justify-content 该属性决定了flex items 在main axis上的对齐方式 其取值方式有6个
 
 -  flex-start(默认值) 与main start对齐 没有间距
 
