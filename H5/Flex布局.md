@@ -40,9 +40,7 @@
 
 ## 用在flex container上的属性
 
-
-
-##### flex-direction
+### flex-direction
 
 ​	**该属性决定了main axis的方向 用来改变flex item的布局方向 取值一共有4个 ** 
 
@@ -62,7 +60,7 @@
 
     <img src="images/column-reverse.png" style="zoom:50%;" />
 
-##### justify-content
+### justify-content
 
 ​	**该属性决定了flex items 在main axis上的对齐方式 其取值方式有6个**
 
@@ -90,9 +88,7 @@
 
   ![](images/flex-space-around.png)
 
-
-
-##### flex-flow
+### flex-flow
 
 ##### flex-wrap
 
