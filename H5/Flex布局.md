@@ -12,7 +12,7 @@
 2. `display: inline-flex` 开启一个内联flex布局（开启后该元素不独占一行）
 3. 开启了flex布局的元素称为flex container 其子元素称为 flex items
 
-> 注意：
+> ​	注意：
 >
 > 1. 如果一个元素开启了flex布局只有其子元素为flex布局 其孙子元素不为flex布局 
 >
@@ -40,7 +40,7 @@
 
 ## 用在flex container上的属性
 
-### flex-direction  该属性决定了main axis的方向 用来改变flex item的布局方向 取值一共有4个
+### 1.  flex-direction  该属性决定了main axis的方向 用来改变flex item的布局方向 取值一共有4个
 
   - row(默认值) (main start 在左边 main end在右边)
 
@@ -58,7 +58,7 @@
 
     <img src="images/column-reverse.png" style="zoom:50%;" />
 
-### justify-content 该属性决定了flex items 在main axis上的对齐方式 其取值方式有6个
+### 2.  justify-content 该属性决定了flex items 在main axis上的对齐方式 其取值方式有6个
 
 -  flex-start(默认值) 与main start对齐 没有间距
 
@@ -84,15 +84,83 @@
 
   ![](images/flex-space-around.png)
 
-### flex-flow
+### 3.  align-items 改属性决定了flex item 在cross axis上的对齐方式 取值方式有5个
 
-##### flex-wrap
+- flex-start  与cross satart 对齐
+
+  ![](images/align-flex-start.png)
+
+- flex-end 与 cross end 对齐
+
+  ![](images/align-flex-end.png)
+
+- center 居中对齐
+
+  ![](images/align-flex-center.png)
+
+- baseline 与基准线对齐
+
+  ![](images/align-flex-baseline.png)
+
+- stretch(默认值) 当flex items 在cross axis方向上的size为auto时，会自动拉伸至填充 flex container
+
+  ![](images/align-flex-stretch.png)
+
+### 4. flex-wrap 决定了 flex container 中的flex items 是单行还是多行显示
+
+- nowrap(默认值) 单行显示
+
+  <img src="images/flex-wrap-nowwrap.png" style="zoom:50%;" />
+
+- wrap 多行显示
+
+  <img src="images/flex-wrap-wrap.png" style="zoom:50%;" />
+
+- wrap-reverse 多行显示（与wrap对比，cross start 与 cross end相反）
+
+  <img src="images/flex-wrap-wrap-reverse.png" style="zoom:50%;" />
+
+### 4. flex-flow 是 flex-direction || flex-wrap的简写属性
+
+> 比如：flex-flow: column wrap 等价于
+>
+> flex-direction: column
+>
+> flex-wrap: wrap
+>
+> 如： flex-flow: row-reverse 等价于
+>
+> flex-direction: row-reverse
+>
+> flex-warp: nowrarp
 
 ##### 
 
-##### align-items
+### 5. align-content 决定了多行flex items 在cross axis 上的对齐方式，用法与justify-content很类似
 
-##### align-content
+- stretch（默认值）与align-items的stretch类似
+
+  ![](images/aligncontent-stretch.png)
+
+- flex-start 与cross start 对齐
+
+  ![](images/aligncontent-flex-start.png)
+
+- flex-end 与 cross end 对齐
+
+  ![](images/aligncontent-flex-end.png)
+
+- center 居中对齐
+
+  ![](images/aligncontent-center.png)
+
+- space-between flex items之间的距离相等
+
+  ![](images/aligncontent-space-between.png)
+
+- spacer-around flex items之间的距离相等 与 cross start 与cross end 之间的距离是 flex items 之间距离的一半
+
+  ![](images/aligncontent-space-around.png)
 
 ## 用在flex items上的属性
 
