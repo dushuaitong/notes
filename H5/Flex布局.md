@@ -164,17 +164,56 @@
 
 ## 用在flex items上的属性
 
-##### flex
+### 1. order 决定了 flex item 的排布顺序 可以设置任意的整数（可以为负值）默认为 0 值越小越排在前面
 
-##### flex-grow
+- div2 的order 为 -1
 
-##### flex-basis
+  ![](images/order--1.png)
 
-##### flex-shrink
+- div2的order 为 1
 
-##### order
+  ![](images/order-1.png)
 
-##### align-self
+### 2. align-self 可以覆盖掉 flex container 上设置的 align-items 的值 单独给该元素设置对齐方式 取值方式和align-items一样 含义也一样
+
+​	如： `align-self: center` 该元素的对齐方式会覆盖掉 align-items上的对齐方式
+
+### 3.  flex-basis 用来设置flex items 在main cross上的大小
+
+- auto(默认值)
+- content 取决于内容本身的size 如果设置的值超过了max-height min-width min-width min-height 会议后者为准
+
+### 4.  flex-grow 可以设置任意非负的数字 包含小数 默认值为0
+
+- 如果flex items在flex container 上的空间有剩余时
+
+  > 1. 如果所有的flex items上的flex-grow的总和值大于1，则每个flex item的扩展size为 flex container的剩余size * flex-grow/所有flex items的总和
+  > 2. 如果所有的flex items上的flex-grow的总和值小于1，则每个flex item的扩展size为 flex container的剩余size  * 所有flex items的总和 *  flex-grow
+  > 3. flex items 扩展后的最终size 不能超过 max-width/max-height
+
+- 如果flex items在flex container 上的空间没有有剩余时，该属性无效
+
+### 5. flex-shrink 可以设置任意非负的数字 包含小数 默认值为1
+
+- 如果flex items超出了flex container 上的空间该值有效
+
+> 假设flex items在flex container 上超出的空间大小为 sum
+>
+> 收缩比例 = flex-shrink * flex-item的base size
+>
+> 1. 如果所有 flex-shrink的值大于1 flex item 的收缩大小为  sum * 收缩比例 / 所有flex items的收缩比例之和
+> 2.  如果所有 flex-shrink的值小于1  flex item 的收缩大小为 sum * 收缩比例之和 * 收缩比例  /  所有flex items的收缩比例之和
+
+- 如果flex items没有超出了flex container 上的空间时 该值无效
+
+### 6. flex 是 flex-grow flex-shrink? || flex-basis的简写
+
+- 默认值为 0 1 auto
+- none 为 0 0 auto
+
+##### 
+
+##### 
 
 
 
