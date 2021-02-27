@@ -110,3 +110,86 @@ JSON 内置对象
 
 - `parse()`: 以文本字符串形式接受JSON对象作为参数，并返回相应的对象。
 - `stringify()`: 接收一个对象作为参数，返回一个对应的JSON字符串。
+
+## 3. 其他注意点
+
+- 使用严格模式  
+
+  ```javascript
+  'use strict';
+  ```
+
+- es6字符串新语法  拼接
+
+  ```javascript
+  let str = 'Hello Word'
+  let str = `${str} yes`
+  let str1 = `hhe
+  						hehejejhehe` // 多行字符串
+  ```
+
+- 数组的几个方法
+
+  1. ### push和pop unshift和shift  
+
+  2. ### sort
+
+  3. ### reverse 
+
+  4. ### splice 万能方法
+
+     ```javascript
+     var arr = ['Microsoft', 'Apple', 'Yahoo', 'AOL', 'Excite', 'Oracle'];
+     // 从索引2开始删除3个元素,然后再添加两个元素:
+     arr.splice(2, 3, 'Google', 'Facebook'); // 返回删除的元素 ['Yahoo', 'AOL', 'Excite']
+     arr; // ['Microsoft', 'Apple', 'Google', 'Facebook', 'Oracle']
+     // 只删除,不添加:
+     arr.splice(2, 2); // ['Google', 'Facebook']
+     arr; // ['Microsoft', 'Apple', 'Oracle']
+     // 只添加,不删除:
+     arr.splice(2, 0, 'Google', 'Facebook'); // 返回[],因为没有删除任何元素
+     arr; // ['Microsoft', 'Apple', 'Google', 'Facebook', 'Oracle']
+     ```
+
+  5. ### concat
+
+  6. ### join
+
+- 检测某个对象是有有某个属性 用 in 如：`'name' in xiaoming;`
+
+- ### Map和Set es6 新的特性  
+
+  ```javascript
+  // 是一组键值对的结构 和 Dictionary 差不多
+  var m = new Map([['Michael', 95], ['Bob', 75], ['Tracy', 85]]);
+  m.get('Michael'); // 95
+  m.set('Adam', 67); 
+  
+  var s = new Set([1, 2, 3]);
+  s.add(5)
+  s.delete(5)
+  ```
+
+- #### iterable 遍历
+
+``` javaScript
+'use strict';
+var a = [1, 2, 3];
+for (var x of a) { /// 只遍历值
+}
+
+var a = ['A', 'B', 'C'];
+a.name = 'Hello';
+for (var x in a) { /// 会把属性名称也一块遍历了
+    console.log(x); // '0', '1', '2', 'name'
+}
+
+a.forEach(function (element, index, array) {
+    // element: 指向当前元素的值
+    // index: 指向当前索引
+    // array: 指向Array对象本身
+    console.log(element + ', index = ' + index);
+});
+```
+
+- 函数
