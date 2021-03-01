@@ -193,3 +193,7 @@ a.forEach(function (element, index, array) {
 ```
 
 - 函数
+
+  var 会提升变量的作用域 let 一般是块级作用域 const 声明一个常量es6 之前一般用大写的表示这是个常量
+
+- 解构语法  es6
